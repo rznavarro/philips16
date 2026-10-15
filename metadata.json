@@ -1,0 +1,6 @@
+{
+  "name": "Centro Médico Phillips 16",
+  "description": "Centro médico a pasos del Metro Plaza de Armas: medicina general, especialidades, dental, ecografías y exámenes. Agenda tu hora online o por WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

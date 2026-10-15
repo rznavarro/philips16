@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="es-CL" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Centro Médico Phillips 16 | Especialidades, dental y ecografías en Santiago Centro</title>
+    <meta name="description" content="Centro médico a pasos del Metro Plaza de Armas: medicina general, especialidades, dental, ecografías y exámenes. Agenda tu hora online o por WhatsApp." />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:title" content="Centro Médico Phillips 16 | Especialidades, dental y ecografías en Santiago Centro" />
+    <meta property="og:description" content="Centro médico a pasos del Metro Plaza de Armas: medicina general, especialidades, dental, ecografías y exámenes. Agenda tu hora online o por WhatsApp." />
+    <meta property="og:image" content="https://www.centromedicophillips16.cl/wp-content/uploads/2024/12/cropped-Captura-de-pantalla-2024-12-04-a-las-17.37.32-270x270.png" />
+    <meta property="og:image:width" content="270" />
+    <meta property="og:image:height" content="270" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Centro Médico Phillips 16 | Especialidades, dental y ecografías en Santiago Centro" />
+    <meta name="twitter:description" content="Centro médico a pasos del Metro Plaza de Armas: medicina general, especialidades, dental, ecografías y exámenes. Agenda tu hora online o por WhatsApp." />
+    <meta name="twitter:image" content="https://www.centromedicophillips16.cl/wp-content/uploads/2024/12/cropped-Captura-de-pantalla-2024-12-04-a-las-17.37.32-270x270.png" />
+
+    <link rel="icon" type="image/png" href="https://www.centromedicophillips16.cl/wp-content/uploads/2024/12/cropped-Captura-de-pantalla-2024-12-04-a-las-17.37.32-192x192.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#1E5FA3',
+              secondary: '#143F6B',
+              surface: '#F4F7FA',
+              ink: '#1C2733',
+            },
+            fontFamily: {
+              display: ['Arvo', 'serif'],
+              sans: ['Roboto', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      /* Placa Phillips 16 - Letrero de calle Santiago */
+      .placa-phillips {
+        border-radius: 6px;
+        background-color: #1E5FA3;
+        color: #FFFFFF;
+        font-family: 'Arvo', serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.75rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        outline: 1.5px solid #FFFFFF;
+        outline-offset: -3px;
+        box-shadow: 0 1px 3px rgba(28, 39, 51, 0.12);
+        user-select: none;
+      }
+      .placa-phillips-inverted {
+        border-radius: 6px;
+        background-color: #FFFFFF;
+        color: #1E5FA3;
+        font-family: 'Arvo', serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.75rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        outline: 1.5px solid #1E5FA3;
+        outline-offset: -3px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+        user-select: none;
+      }
+
+      /* Animación Hero rotador de palabras */
+      .rotator-container {
+        display: inline-block;
+        position: relative;
+        overflow: hidden;
+        vertical-align: baseline;
+        line-height: 1.15;
+      }
+      .rotator-item {
+        display: block;
+        transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1), opacity 400ms cubic-bezier(0.16, 1, 0.3, 1);
+        white-space: nowrap;
+      }
+      .rotator-item.slide-out {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+      .rotator-item.slide-prep {
+        transform: translateY(100%);
+        opacity: 0;
+        transition: none;
+      }
+      .rotator-item.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+
+      /* Microinteracciones fade-up escalonado del hero */
+      @keyframes heroFadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .fade-step-1 { animation: heroFadeUp 300ms ease-out 0ms both; }
+      .fade-step-2 { animation: heroFadeUp 300ms ease-out 80ms both; }
+      .fade-step-3 { animation: heroFadeUp 300ms ease-out 160ms both; }
+      .fade-step-4 { animation: heroFadeUp 300ms ease-out 240ms both; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .fade-step-1, .fade-step-2, .fade-step-3, .fade-step-4 {
+          animation: none !important;
+          opacity: 1 !important;
+          transform: none !important;
+        }
+        .rotator-container {
+          display: none !important;
+        }
+        .reduced-motion-fallback {
+          display: inline !important;
+        }
+      }
+    </style>
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "Centro Médico Phillips 16",
+      "image": "https://www.centromedicophillips16.cl/wp-content/uploads/2024/12/cropped-Captura-de-pantalla-2024-12-04-a-las-17.37.32-270x270.png",
+      "url": "https://www.centromedicophillips16.cl/",
+      "telephone": "+56226333038",
+      "email": "informaciones@centromedicophillips16.cl",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Phillips 16",
+        "addressLocality": "Santiago",
+        "addressRegion": "Región Metropolitana",
+        "postalCode": "8320340",
+        "addressCountry": "CL"
+      },
+      "sameAs": [
+        "https://www.facebook.com/CentroMedicoPhillips/"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:30",
+          "closes": "20:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "08:30",
+          "closes": "17:00"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="font-sans text-ink bg-surface antialiased selection:bg-primary selection:text-white pb-24">
+
+    <!-- HEADER FIJO (Sticky, 64px, fondo blanco, borde inferior ink/10) -->
+    <header class="sticky top-0 z-40 bg-white border-b border-ink/10 h-16 w-full">
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-6 h-full flex items-center justify-between">
+        <!-- Marca del Header -->
+        <a href="#inicio" class="flex items-center gap-2.5 group focus:outline-none focus:ring-2 focus:ring-primary rounded-[8px]" aria-label="Centro Médico Phillips 16 - Inicio">
+          <img
+            src="https://www.centromedicophillips16.cl/wp-content/uploads/2024/12/cropped-Captura-de-pantalla-2024-12-04-a-las-17.37.32-192x192.png"
+            alt="Isotipo de Centro Médico Phillips 16"
+            width="36"
+            height="36"
+            class="w-9 h-9 rounded-[8px] object-contain shrink-0"
+            onerror="this.style.display='none'"
+          />
+          <span class="font-display font-bold text-[17px] text-ink leading-tight group-hover:text-primary transition-colors">
+            Centro Médico Phillips 16
+          </span>
+        </a>
+
+        <!-- Navegación y CTA Escritorio -->
+        <nav class="hidden lg:flex items-center gap-7" aria-label="Navegación principal">
+          <a href="#especialidades" class="font-sans text-[15px] font-medium text-ink/80 hover:text-primary transition-colors">Especialidades</a>
+          <a href="#por-que" class="font-sans text-[15px] font-medium text-ink/80 hover:text-primary transition-colors">Por qué venir</a>
+          <a href="#ubicacion" class="font-sans text-[15px] font-medium text-ink/80 hover:text-primary transition-colors">Ubicación</a>
+          <a href="#contacto" class="font-sans text-[15px] font-medium text-ink/80 hover:text-primary transition-colors">Contacto</a>
+          <a href="tel:+56226333038" class="font-sans text-[15px] font-medium text-ink hover:text-primary transition-colors flex items-center gap-1.5">
+            <svg class="w-4 h-4 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>(2) 2633 3038</span>
+          </a>
+          <a
+            href="https://phillips16.agendapro.com/cl"
+            target="_blank"
+            rel="noopener"
+            class="bg-primary hover:bg-secondary text-white font-sans font-medium text-[15px] px-5 py-2.5 rounded-[12px] active:scale-[0.98] transition-all"
+          >
+            Agendar hora
+          </a>
+        </nav>
+
+        <!-- CTA Móvil compacto -->
+        <div class="lg:hidden">
+          <a
+            href="https://phillips16.agendapro.com/cl"
+            target="_blank"
+            rel="noopener"
+            class="bg-primary hover:bg-secondary text-white font-sans font-medium text-[15px] px-4 py-2 rounded-[10px] active:scale-[0.98] transition-all inline-flex items-center"
+          >
+            Agendar
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- SECCIÓN 1: HERO (id="inicio", fondo surface, marca de agua «16») -->
+    <section id="inicio" class="relative bg-surface overflow-hidden pt-4 pb-6 sm:py-10 lg:py-16">
+      <!-- Marca de agua «16» en Arvo 700 al 6% de opacidad -->
+      <span class="absolute right-0 top-1/2 -translate-y-1/2 font-display font-bold text-[220px] sm:text-[320px] lg:text-[420px] leading-none text-primary opacity-[0.06] select-none pointer-events-none z-0 translate-x-12 sm:translate-x-16" aria-hidden="true">
+        16
+      </span>
+
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-12 items-center">
+          
+          <!-- Columna Izquierda: Placa, Titular y Subtítulo -->
+          <div class="lg:col-span-7">
+            <!-- Placa PHILLIPS 16 -->
+            <div class="fade-step-1 mb-2.5 sm:mb-3">
+              <span class="placa-phillips">PHILLIPS 16 · SANTIAGO CENTRO</span>
+            </div>
+
+            <!-- H1 Principal con palabra rotativa -->
+            <h1 class="fade-step-2 font-display font-bold text-[34px] sm:text-[42px] lg:text-[60px] text-ink leading-[1.08] tracking-tight mb-2 sm:mb-4">
+              <span class="reduced-motion-fallback hidden">Tu hora médica a pasos de Plaza de Armas</span>
+              <span class="motion-content">
+                Tu hora de 
+                <span class="block sm:inline rotator-container min-h-[44px] sm:min-h-auto">
+                  <span id="rotator-word" class="rotator-item active text-primary border-b-[3px] border-primary/30 pb-0.5">Medicina General</span>
+                </span>
+                <span class="block sm:inline">a pasos de Plaza de Armas</span>
+              </span>
+            </h1>
+
+            <!-- Subtítulo -->
+            <p class="fade-step-3 font-sans text-ink/80 text-[15px] sm:text-[17px] leading-relaxed max-w-xl">
+              Atención médica, dental, ecografías, exámenes y radiografías en un solo lugar, con precios convenientes.
+            </p>
+          </div>
+
+          <!-- Columna Derecha: Tarjeta de Reserva para 390x844 sin scroll -->
+          <div class="lg:col-span-5 fade-step-4">
+            <div class="bg-white rounded-[20px] p-4 sm:p-6 border border-ink/10 shadow-[0_10px_30px_rgba(28,39,51,0.08)]">
+              
+              <!-- CTA Principal: Agendar hora online -->
+              <a
+                href="https://phillips16.agendapro.com/cl"
+                target="_blank"
+                rel="noopener"
+                class="w-full min-h-[52px] bg-primary hover:bg-secondary text-white font-sans font-medium text-[17px] rounded-[14px] flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm mb-2.5"
+              >
+                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                  <line x1="16" y1="2" x2="16" y2="6"/>
+                  <line x1="8" y1="2" x2="8" y2="6"/>
+                  <line x1="3" y1="10" x2="21" y2="10"/>
+                </svg>
+                <span>Agendar hora online</span>
+              </a>
+
+              <!-- CTA Secundario: Escribir por WhatsApp -->
+              <a
+                href="https://wa.me/56972813897?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Centro%20M%C3%A9dico%20Phillips%2016."
+                target="_blank"
+                rel="noopener"
+                class="w-full min-h-[52px] bg-white border-2 border-primary text-primary hover:bg-surface active:scale-[0.98] font-sans font-medium text-[17px] rounded-[14px] flex items-center justify-center gap-2 transition-all mb-2.5"
+              >
+                <svg class="w-5 h-5 text-primary" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.39C8.83 7.39 8.5 7.47 8.22 7.78C7.94 8.08 7.15 8.83 7.15 10.36C7.15 11.89 8.27 13.36 8.42 13.57C8.58 13.77 10.61 16.9 13.72 18.24C14.46 18.56 15.03 18.75 15.49 18.89C16.23 19.13 16.9 19.09 17.43 19.01C18.03 18.92 19.27 18.26 19.53 17.53C19.79 16.8 19.79 16.17 19.71 16.04C19.63 15.91 19.42 15.83 19.11 15.68C18.8 15.52 17.27 14.77 16.98 14.67C16.7 14.56 16.5 14.51 16.29 14.82C16.08 15.13 15.5 15.83 15.32 16.04C15.14 16.24 14.96 16.27 14.65 16.11C14.34 15.96 13.34 15.63 12.16 14.58C11.24 13.76 10.62 12.75 10.44 12.44C10.26 12.13 10.42 11.97 10.58 11.81C10.72 11.67 10.89 11.45 11.05 11.27C11.21 11.09 11.26 10.96 11.36 10.75C11.46 10.55 11.41 10.37 11.33 10.21C11.26 10.06 10.64 8.53 10.38 7.92C10.13 7.33 9.87 7.41 9.68 7.4C9.5 7.39 9.29 7.39 9.08 7.39"/>
+                </svg>
+                <span>Escribir por WhatsApp</span>
+              </a>
+
+              <!-- CTA Terciaria: Llamar -->
+              <div class="text-center py-1">
+                <a
+                  href="tel:+56226333038"
+                  class="font-sans font-medium text-[15px] text-ink/80 hover:text-primary transition-colors inline-flex items-center gap-1.5 focus:outline-none focus:ring-1 focus:ring-primary rounded"
+                >
+                  <svg class="w-4 h-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  </svg>
+                  <span>Llamar al (2) 2633 3038</span>
+                </a>
+              </div>
+
+              <!-- Horario de hoy dinámico -->
+              <div class="mt-2 pt-2.5 border-t border-ink/10 flex items-center justify-center gap-1.5 text-ink/75 text-[13px] sm:text-[14px]">
+                <svg class="w-4 h-4 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <span id="today-schedule-text">Hoy atendemos de 8:30 a 20:30 hrs</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN 2: ESPECIALIDADES Y EXÁMENES (id="especialidades", fondo blanco) -->
+    <section id="especialidades" class="bg-white py-[72px] lg:py-[120px]">
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-6">
+        
+        <!-- Encabezado de Sección -->
+        <div class="mb-10 lg:mb-14">
+          <div class="mb-3">
+            <span class="placa-phillips">01 ESPECIALIDADES</span>
+          </div>
+          <h2 class="font-display font-bold text-[30px] lg:text-[44px] text-ink leading-tight mb-3">
+            34 atenciones en un mismo lugar
+          </h2>
+          <p class="font-sans text-[17px] text-ink/75 max-w-2xl leading-relaxed">
+            Toca la especialidad o el examen que necesitas y te respondemos por WhatsApp.
+          </p>
+        </div>
+
+        <!-- Acordeón de 4 grupos (un solo grupo abierto a la vez) -->
+        <div class="space-y-4" id="accordion-container">
+          
+          <!-- GRUPO 1: Medicina y especialidades (17 atenciones - Abierto por defecto) -->
+          <div class="border border-ink/10 rounded-[20px] overflow-hidden bg-white shadow-sm transition-all" data-accordion-item>
+            <button
+              type="button"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-surface/50 transition-colors focus:outline-none focus:bg-surface/60"
+              aria-expanded="true"
+              onclick="toggleAccordion(0)"
+            >
+              <h3 class="font-display font-bold text-[18px] sm:text-[20px] text-ink flex items-center gap-3">
+                <span class="text-primary font-bold">01</span>
+                <span>Medicina y especialidades</span>
+                <span class="text-xs font-sans font-normal text-ink/60 bg-surface px-2.5 py-0.5 rounded-full border border-ink/10">17</span>
+              </h3>
+              <svg class="w-5 h-5 text-ink/60 transform rotate-180 transition-transform duration-300 accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="accordion-content px-6 pb-6 pt-2 block">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="group-1-list">
+                <!-- Se llenará con las 17 especialidades -->
+              </div>
+            </div>
+          </div>
+
+          <!-- GRUPO 2: Salud mental y terapias (7 atenciones) -->
+          <div class="border border-ink/10 rounded-[20px] overflow-hidden bg-white shadow-sm transition-all" data-accordion-item>
+            <button
+              type="button"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-surface/50 transition-colors focus:outline-none focus:bg-surface/60"
+              aria-expanded="false"
+              onclick="toggleAccordion(1)"
+            >
+              <h3 class="font-display font-bold text-[18px] sm:text-[20px] text-ink flex items-center gap-3">
+                <span class="text-primary font-bold">02</span>
+                <span>Salud mental y terapias</span>
+                <span class="text-xs font-sans font-normal text-ink/60 bg-surface px-2.5 py-0.5 rounded-full border border-ink/10">7</span>
+              </h3>
+              <svg class="w-5 h-5 text-ink/60 transform transition-transform duration-300 accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="accordion-content px-6 pb-6 pt-2 hidden">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="group-2-list">
+                <!-- Se llenará con las 7 atenciones -->
+              </div>
+            </div>
+          </div>
+
+          <!-- GRUPO 3: Ecografías y exámenes (9 atenciones) -->
+          <div class="border border-ink/10 rounded-[20px] overflow-hidden bg-white shadow-sm transition-all" data-accordion-item>
+            <button
+              type="button"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-surface/50 transition-colors focus:outline-none focus:bg-surface/60"
+              aria-expanded="false"
+              onclick="toggleAccordion(2)"
+            >
+              <h3 class="font-display font-bold text-[18px] sm:text-[20px] text-ink flex items-center gap-3">
+                <span class="text-primary font-bold">03</span>
+                <span>Ecografías y exámenes</span>
+                <span class="text-xs font-sans font-normal text-ink/60 bg-surface px-2.5 py-0.5 rounded-full border border-ink/10">9</span>
+              </h3>
+              <svg class="w-5 h-5 text-ink/60 transform transition-transform duration-300 accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="accordion-content px-6 pb-6 pt-2 hidden">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="group-3-list">
+                <!-- Se llenará con las 9 ecografías y exámenes -->
+              </div>
+            </div>
+          </div>
+
+          <!-- GRUPO 4: Dental (1 atención) -->
+          <div class="border border-ink/10 rounded-[20px] overflow-hidden bg-white shadow-sm transition-all" data-accordion-item>
+            <button
+              type="button"
+              class="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-surface/50 transition-colors focus:outline-none focus:bg-surface/60"
+              aria-expanded="false"
+              onclick="toggleAccordion(3)"
+            >
+              <h3 class="font-display font-bold text-[18px] sm:text-[20px] text-ink flex items-center gap-3">
+                <span class="text-primary font-bold">04</span>
+                <span>Dental</span>
+                <span class="text-xs font-sans font-normal text-ink/60 bg-surface px-2.5 py-0.5 rounded-full border border-ink/10">1</span>
+              </h3>
+              <svg class="w-5 h-5 text-ink/60 transform transition-transform duration-300 accordion-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="accordion-content px-6 pb-6 pt-2 hidden">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3" id="group-4-list">
+                <!-- Se llenará con Clínica Dental -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- CTA al final de Especialidades -->
+        <div class="mt-8 text-center bg-surface rounded-[16px] p-6 border border-ink/10">
+          <p class="font-sans text-[17px] text-ink mb-3">
+            ¿No encuentras lo que buscas? Escríbenos directamente y te orientamos de inmediato.
+          </p>
+          <a
+            href="https://wa.me/56972813897?text=Hola%2C%20quiero%20hacer%20una%20consulta%20general%20en%20Centro%20M%C3%A9dico%20Phillips%2016."
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-2 bg-primary hover:bg-secondary text-white font-sans font-medium text-[16px] px-6 py-3 rounded-[12px] active:scale-[0.98] transition-all"
+          >
+            <span>Escríbenos por WhatsApp</span>
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/>
+              <polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 3: POR QUÉ VENIR (id="por-que", fondo primary, texto blanco) -->
+    <section id="por-que" class="bg-primary text-white py-[72px] lg:py-[120px]">
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-6">
+        
+        <!-- Placa 02 POR QUÉ VENIR invertida -->
+        <div class="mb-4">
+          <span class="placa-phillips-inverted">02 POR QUÉ VENIR</span>
+        </div>
+
+        <!-- H2 requerido -->
+        <h2 class="font-display font-bold text-[30px] lg:text-[44px] text-white leading-tight mb-10">
+          Razones para atenderte en Phillips 16
+        </h2>
+
+        <!-- 4 Afirmaciones grandes en Arvo 700 apiladas (sin tarjetas) -->
+        <div class="divide-y divide-white/20 border-t border-b border-white/20 mb-12">
+          
+          <div class="py-6 sm:py-8 flex items-start gap-4 sm:gap-6">
+            <span class="font-display font-bold text-white/50 text-[20px] sm:text-[28px] shrink-0 pt-0.5">01</span>
+            <p class="font-display font-bold text-[22px] sm:text-[26px] lg:text-[32px] text-white leading-snug">
+              A pasos del Metro Plaza de Armas.
+            </p>
+          </div>
+
+          <div class="py-6 sm:py-8 flex items-start gap-4 sm:gap-6">
+            <span class="font-display font-bold text-white/50 text-[20px] sm:text-[28px] shrink-0 pt-0.5">02</span>
+            <p class="font-display font-bold text-[22px] sm:text-[26px] lg:text-[32px] text-white leading-snug">
+              Médico, dental, ecografías, exámenes y radiografías en un solo lugar.
+            </p>
+          </div>
+
+          <div class="py-6 sm:py-8 flex items-start gap-4 sm:gap-6">
+            <span class="font-display font-bold text-white/50 text-[20px] sm:text-[28px] shrink-0 pt-0.5">03</span>
+            <p class="font-display font-bold text-[22px] sm:text-[26px] lg:text-[32px] text-white leading-snug">
+              De lunes a viernes hasta las 20:30 y sábados hasta las 17:00.
+            </p>
+          </div>
+
+          <div class="py-6 sm:py-8 flex items-start gap-4 sm:gap-6">
+            <span class="font-display font-bold text-white/50 text-[20px] sm:text-[28px] shrink-0 pt-0.5">04</span>
+            <p class="font-display font-bold text-[22px] sm:text-[26px] lg:text-[32px] text-white leading-snug">
+              Agenda como te acomode: online, por WhatsApp o por teléfono.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Cierre de sección con botón blanco -->
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+          <p class="font-sans text-[19px] sm:text-[22px] font-medium text-white">
+            Atención de calidad a precios convenientes.
+          </p>
+          <a
+            href="https://phillips16.agendapro.com/cl"
+            target="_blank"
+            rel="noopener"
+            class="bg-white hover:bg-surface text-primary font-sans font-medium text-[17px] min-h-[52px] px-8 rounded-[14px] inline-flex items-center justify-center active:scale-[0.98] transition-all shadow-md shrink-0 w-full sm:w-auto"
+          >
+            Agendar hora online
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 4: UBICACIÓN Y HORARIO (id="ubicacion", fondo surface) -->
+    <section id="ubicacion" class="bg-surface py-[72px] lg:py-[120px]">
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-6">
+        
+        <!-- Placa 03 UBICACIÓN -->
+        <div class="mb-3">
+          <span class="placa-phillips">03 UBICACIÓN</span>
+        </div>
+
+        <!-- H2 -->
+        <h2 class="font-display font-bold text-[30px] lg:text-[44px] text-ink leading-tight mb-10">
+          Estamos en Phillips 16, Santiago Centro
+        </h2>
+
+        <!-- Grid 2 Columnas: Tarjeta izquierda + Mapa derecha -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Tarjeta de Información -->
+          <div class="lg:col-span-5 bg-white rounded-[20px] p-6 sm:p-8 border border-ink/10 shadow-[0_10px_30px_rgba(28,39,51,0.08)]">
+            
+            <!-- Dirección -->
+            <div class="mb-6">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <div>
+                  <h3 class="font-display font-bold text-[18px] text-ink mb-1">Dirección</h3>
+                  <p class="font-sans text-[16px] text-ink/80 leading-relaxed">
+                    Phillips 16, Santiago, Región Metropolitana, código postal 8320340, Chile.
+                  </p>
+                  <p class="font-sans font-medium text-primary text-[15px] mt-1">
+                    A pasos del Metro Plaza de Armas.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Horario -->
+            <div class="mb-6 pt-5 border-t border-ink/10">
+              <div class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-primary shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="12 6 12 12 16 14"/>
+                </svg>
+                <div>
+                  <h3 class="font-display font-bold text-[18px] text-ink mb-1.5">Horario de atención</h3>
+                  <div class="space-y-1 font-sans text-[15px] text-ink/80">
+                    <p><span class="font-medium text-ink">Lunes a viernes:</span> 8:30 a 20:30 hrs</p>
+                    <p><span class="font-medium text-ink">Sábado:</span> 8:30 a 17:00 hrs</p>
+                    <p class="text-ink/60 text-[14px]">Domingos y festivos: cerrado</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contacto telefónico y correo -->
+            <div class="mb-6 pt-5 border-t border-ink/10 space-y-3">
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                <div class="font-sans text-[15px] text-ink flex flex-wrap gap-x-3">
+                  <a href="tel:+56226333038" class="font-medium text-ink hover:text-primary transition-colors underline decoration-ink/20 hover:decoration-primary">(2) 2633 3038</a>
+                  <span class="text-ink/30">·</span>
+                  <a href="tel:+56226386870" class="font-medium text-ink hover:text-primary transition-colors underline decoration-ink/20 hover:decoration-primary">(2) 2638 6870</a>
+                </div>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <a href="mailto:informaciones@centromedicophillips16.cl" class="font-sans text-[15px] text-ink hover:text-primary transition-colors truncate">
+                  informaciones@centromedicophillips16.cl
+                </a>
+              </div>
+
+              <div class="flex items-center gap-3">
+                <svg class="w-5 h-5 text-primary shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+                <a href="https://www.facebook.com/CentroMedicoPhillips/" target="_blank" rel="noopener" class="font-sans text-[15px] text-ink hover:text-primary transition-colors">
+                  Facebook: Centro Médico Phillips
+                </a>
+              </div>
+            </div>
+
+            <!-- Botón Cómo llegar -->
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Centro%20M%C3%A9dico%20Phillips%2016%2C%20Phillips%2016%2C%20Santiago"
+              target="_blank"
+              rel="noopener"
+              class="w-full min-h-[52px] bg-primary hover:bg-secondary text-white font-sans font-medium text-[16px] rounded-[14px] flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm"
+            >
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+              </svg>
+              <span>Cómo llegar</span>
+            </a>
+
+          </div>
+
+          <!-- Mapa con Iframe Real -->
+          <div class="lg:col-span-7">
+            <div class="rounded-[20px] overflow-hidden border border-ink/10 shadow-[0_10px_30px_rgba(28,39,51,0.08)] bg-white h-[300px] lg:h-[420px] w-full">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.4603522069715!2d-70.65161168480097!3d-33.43731098077774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c5a3093ad479%3A0xd04efe14f8fe6eb3!2sCentro+Medico+Phillips+16!5e0!3m2!1ses!2scl!4v1501778164906"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa de Centro Médico Phillips 16"
+                class="w-full h-full"
+              ></iframe>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECCIÓN 5: AGENDA POR WHATSAPP (id="contacto", fondo blanco) -->
+    <section id="contacto" class="bg-white py-[72px] lg:py-[120px]">
+      <div class="max-w-[760px] mx-auto px-5 sm:px-6">
+        
+        <!-- Placa 04 AGENDA -->
+        <div class="mb-3 text-center">
+          <span class="placa-phillips">04 AGENDA</span>
+        </div>
+
+        <!-- H2 -->
+        <h2 class="font-display font-bold text-[30px] lg:text-[44px] text-ink leading-tight text-center mb-3">
+          Cuéntanos qué necesitas
+        </h2>
+        <p class="font-sans text-[17px] text-ink/75 text-center leading-relaxed mb-8 sm:mb-10">
+          Completa tus datos y se abrirá WhatsApp con tu mensaje listo para enviar.
+        </p>
+
+        <!-- Formulario sin backend -->
+        <form id="whatsapp-booking-form" onsubmit="handleFormSubmit(event)" class="bg-surface rounded-[20px] p-6 sm:p-8 border border-ink/10 shadow-[0_10px_30px_rgba(28,39,51,0.08)] space-y-5">
+          
+          <!-- Campo: Nombre (obligatorio) -->
+          <div>
+            <label for="form-nombre" class="block font-sans font-medium text-[15px] text-ink mb-1.5">
+              Nombre completo <span class="text-primary">*</span>
+            </label>
+            <input
+              type="text"
+              id="form-nombre"
+              name="nombre"
+              required
+              placeholder="Ej. Francisca Pérez"
+              class="w-full h-[52px] px-4 rounded-[12px] bg-white border border-ink/15 text-ink placeholder:text-ink/40 font-sans text-[16px] focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+            />
+          </div>
+
+          <!-- Campo: Especialidad o Examen (select agrupado con optgroup) -->
+          <div>
+            <label for="form-especialidad" class="block font-sans font-medium text-[15px] text-ink mb-1.5">
+              Especialidad o examen <span class="text-primary">*</span>
+            </label>
+            <select
+              id="form-especialidad"
+              name="especialidad"
+              required
+              class="w-full h-[52px] px-4 rounded-[12px] bg-white border border-ink/15 text-ink font-sans text-[16px] focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+            >
+              <optgroup label="Medicina y especialidades">
+                <option value="Medicina General">Medicina General</option>
+                <option value="Medicina Familiar">Medicina Familiar</option>
+                <option value="Médico Internista">Médico Internista</option>
+                <option value="Pediatría">Pediatría</option>
+                <option value="Ginecología y Obstetricia">Ginecología y Obstetricia</option>
+                <option value="Matrona">Matrona</option>
+                <option value="Dermatología">Dermatología</option>
+                <option value="Traumatología">Traumatología</option>
+                <option value="Gastroenterología">Gastroenterología</option>
+                <option value="Endocrinología">Endocrinología</option>
+                <option value="Urología">Urología</option>
+                <option value="Otorrinolaringología">Otorrinolaringología</option>
+                <option value="Broncopulmonar">Broncopulmonar</option>
+                <option value="Neurología Adulto">Neurología Adulto</option>
+                <option value="Neurología Infantil">Neurología Infantil</option>
+                <option value="Geriatría">Geriatría</option>
+                <option value="Nutrición">Nutrición</option>
+              </optgroup>
+              <optgroup label="Salud mental y terapias">
+                <option value="Psiquiatría">Psiquiatría</option>
+                <option value="Psicología">Psicología</option>
+                <option value="Medicina General con énfasis en Salud Mental">Medicina General con énfasis en Salud Mental</option>
+                <option value="Terapeuta Ocupacional">Terapeuta Ocupacional</option>
+                <option value="Fonoaudiología">Fonoaudiología</option>
+                <option value="Kinesiología">Kinesiología</option>
+                <option value="Terapias Complementarias">Terapias Complementarias</option>
+              </optgroup>
+              <optgroup label="Ecografías y exámenes">
+                <option value="Ecografía Doppler">Ecografía Doppler</option>
+                <option value="Ecografía Ginecológica">Ecografía Ginecológica</option>
+                <option value="Ecografía Transvaginal">Ecografía Transvaginal</option>
+                <option value="Ecografía 3D">Ecografía 3D</option>
+                <option value="Ecografía 5D">Ecografía 5D</option>
+                <option value="Examen Broncopulmonar">Examen Broncopulmonar</option>
+                <option value="Test de Alergias">Test de Alergias</option>
+                <option value="Exámenes">Exámenes</option>
+                <option value="Radiografías">Radiografías</option>
+              </optgroup>
+              <optgroup label="Dental">
+                <option value="Clínica Dental">Clínica Dental</option>
+              </optgroup>
+              <optgroup label="Otra">
+                <option value="Otra consulta">Otra consulta</option>
+              </optgroup>
+            </select>
+          </div>
+
+          <!-- Campo: Día preferido (opcional) -->
+          <div>
+            <label for="form-dia" class="block font-sans font-medium text-[15px] text-ink mb-1.5">
+              Día preferido <span class="font-normal text-ink/50 text-[13px]">(opcional)</span>
+            </label>
+            <input
+              type="text"
+              id="form-dia"
+              name="dia"
+              placeholder="Ej. Este viernes por la mañana"
+              class="w-full h-[52px] px-4 rounded-[12px] bg-white border border-ink/15 text-ink placeholder:text-ink/40 font-sans text-[16px] focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all"
+            />
+          </div>
+
+          <!-- Campo: Mensaje (opcional) -->
+          <div>
+            <label for="form-mensaje" class="block font-sans font-medium text-[15px] text-ink mb-1.5">
+              Mensaje o detalle <span class="font-normal text-ink/50 text-[13px]">(opcional)</span>
+            </label>
+            <textarea
+              id="form-mensaje"
+              name="mensaje"
+              rows="3"
+              placeholder="Escribe aquí cualquier indicación o consulta adicional..."
+              class="w-full p-4 rounded-[12px] bg-white border border-ink/15 text-ink placeholder:text-ink/40 font-sans text-[16px] focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all resize-y"
+            ></textarea>
+          </div>
+
+          <!-- Botón de Envío -->
+          <button
+            type="submit"
+            class="w-full min-h-[52px] bg-primary hover:bg-secondary text-white font-sans font-medium text-[17px] rounded-[14px] flex items-center justify-center gap-2 active:scale-[0.98] transition-all shadow-sm"
+          >
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.39C8.83 7.39 8.5 7.47 8.22 7.78C7.94 8.08 7.15 8.83 7.15 10.36C7.15 11.89 8.27 13.36 8.42 13.57C8.58 13.77 10.61 16.9 13.72 18.24C14.46 18.56 15.03 18.75 15.49 18.89C16.23 19.13 16.9 19.09 17.43 19.01C18.03 18.92 19.27 18.26 19.53 17.53C19.79 16.8 19.79 16.17 19.71 16.04C19.63 15.91 19.42 15.83 19.11 15.68C18.8 15.52 17.27 14.77 16.98 14.67C16.7 14.56 16.5 14.51 16.29 14.82C16.08 15.13 15.5 15.83 15.32 16.04C15.14 16.24 14.96 16.27 14.65 16.11C14.34 15.96 13.34 15.63 12.16 14.58C11.24 13.76 10.62 12.75 10.44 12.44C10.26 12.13 10.42 11.97 10.58 11.81C10.72 11.67 10.89 11.45 11.05 11.27C11.21 11.09 11.26 10.96 11.36 10.75C11.46 10.55 11.41 10.37 11.33 10.21C11.26 10.06 10.64 8.53 10.38 7.92C10.13 7.33 9.87 7.41 9.68 7.4C9.5 7.39 9.29 7.39 9.08 7.39"/>
+            </svg>
+            <span>Enviar por WhatsApp</span>
+          </button>
+
+        </form>
+
+        <!-- Enlace alternativo a AgendaPro -->
+        <div class="mt-6 text-center">
+          <p class="font-sans text-[16px] text-ink/75">
+            ¿Prefieres reservar tú mismo? 
+            <a
+              href="https://phillips16.agendapro.com/cl"
+              target="_blank"
+              rel="noopener"
+              class="text-primary font-medium underline hover:text-secondary transition-colors"
+            >
+              Agenda online
+            </a>
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FOOTER (Fondo secondary, texto blanco/80) -->
+    <footer class="bg-secondary text-white/80 pt-16 pb-20">
+      <div class="max-w-[1120px] mx-auto px-5 sm:px-6">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/10">
+          
+          <!-- Columna 1: Logo SVG + Placa Invertida -->
+          <div class="lg:col-span-5 space-y-4">
+            <div class="h-14 flex items-center">
+              <img
+                src="https://www.centromedicophillips16.cl/wp-content/themes/centromedicophillips16/img/logos/logo-footer.svg"
+                alt="Logo de Centro Médico Phillips 16"
+                height="56"
+                class="max-h-[56px] w-auto"
+                onerror="this.style.display='none'; document.getElementById('footer-logo-fallback').classList.remove('hidden');"
+              />
+              <span id="footer-logo-fallback" class="hidden font-display font-bold text-[22px] text-white">
+                Centro Médico Phillips 16
+              </span>
+            </div>
+            <div>
+              <span class="placa-phillips-inverted">PHILLIPS 16</span>
+            </div>
+            <p class="font-sans text-[15px] text-white/70 max-w-sm leading-relaxed">
+              Atención médica, dental, ecografías, exámenes y radiografías a pasos del Metro Plaza de Armas, Santiago Centro.
+            </p>
+          </div>
+
+          <!-- Columna 2: Ubicación y Horario -->
+          <div class="lg:col-span-4 space-y-2.5 font-sans text-[15px]">
+            <h4 class="font-display font-bold text-white text-[17px] mb-3">Atención y Ubicación</h4>
+            <p class="text-white/80">Phillips 16, Santiago, Región Metropolitana (8320340)</p>
+            <p class="text-white/80"><span class="text-white font-medium">Lunes a viernes:</span> 8:30 a 20:30 hrs</p>
+            <p class="text-white/80"><span class="text-white font-medium">Sábado:</span> 8:30 a 17:00 hrs</p>
+            <div class="pt-2 flex flex-col gap-1.5">
+              <a href="tel:+56226333038" class="text-white hover:underline">(2) 2633 3038</a>
+              <a href="tel:+56226386870" class="text-white hover:underline">(2) 2638 6870</a>
+              <a href="mailto:informaciones@centromedicophillips16.cl" class="text-white/80 hover:text-white transition-colors truncate">
+                informaciones@centromedicophillips16.cl
+              </a>
+            </div>
+          </div>
+
+          <!-- Columna 3: Enlaces de Interés -->
+          <div class="lg:col-span-3 space-y-2.5 font-sans text-[15px]">
+            <h4 class="font-display font-bold text-white text-[17px] mb-3">Accesos rápidos</h4>
+            <ul class="space-y-2">
+              <li>
+                <a href="https://phillips16.agendapro.com/cl" target="_blank" rel="noopener" class="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>Agenda tu hora online</span>
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/CentroMedicoPhillips/" target="_blank" rel="noopener" class="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>Facebook oficial</span>
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.centromedicophillips16.cl/trabaje-con-nosotros/" target="_blank" rel="noopener" class="hover:text-white transition-colors flex items-center gap-1.5">
+                  <span>Trabaje con nosotros</span>
+                  <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Copyright -->
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[14px] text-white/60">
+          <p>© 2026 Centro Médico Phillips 16. Todos los derechos reservados.</p>
+          <p class="mt-2 sm:mt-0">Santiago, Chile</p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP CON BURBUJA TEMPORAL -->
+    <div
+      class="fixed z-50 flex items-center"
+      style="right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px));"
+    >
+      <!-- Burbuja blanca temporal (4 segundos) -->
+      <div
+        id="wa-help-bubble"
+        class="mr-3 bg-white text-ink text-[14px] font-sans font-medium px-3.5 py-2 rounded-[12px] shadow-lg border border-ink/10 transition-opacity duration-500 whitespace-nowrap relative select-none pointer-events-none"
+      >
+        <span>¿Necesitas ayuda?</span>
+        <!-- Puntero a la derecha -->
+        <div class="absolute right-[-6px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[6px] border-t-transparent border-b-[6px] border-b-transparent border-l-[6px] border-l-white"></div>
+      </div>
+
+      <!-- Botón 56px verde WhatsApp #25D366 -->
+      <a
+        href="https://wa.me/56972813897?text=Hola%2C%20quiero%20agendar%20una%20hora%20en%20Centro%20M%C3%A9dico%20Phillips%2016."
+        target="_blank"
+        rel="noopener"
+        aria-label="Escribir por WhatsApp"
+        class="w-14 h-14 rounded-full flex items-center justify-center text-white shadow-xl hover:scale-105 active:scale-95 transition-transform shrink-0"
+        style="background-color: #25D366;"
+      >
+        <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.04 7.39C8.83 7.39 8.5 7.47 8.22 7.78C7.94 8.08 7.15 8.83 7.15 10.36C7.15 11.89 8.27 13.36 8.42 13.57C8.58 13.77 10.61 16.9 13.72 18.24C14.46 18.56 15.03 18.75 15.49 18.89C16.23 19.13 16.9 19.09 17.43 19.01C18.03 18.92 19.27 18.26 19.53 17.53C19.79 16.8 19.79 16.17 19.71 16.04C19.63 15.91 19.42 15.83 19.11 15.68C18.8 15.52 17.27 14.77 16.98 14.67C16.7 14.56 16.5 14.51 16.29 14.82C16.08 15.13 15.5 15.83 15.32 16.04C15.14 16.24 14.96 16.27 14.65 16.11C14.34 15.96 13.34 15.63 12.16 14.58C11.24 13.76 10.62 12.75 10.44 12.44C10.26 12.13 10.42 11.97 10.58 11.81C10.72 11.67 10.89 11.45 11.05 11.27C11.21 11.09 11.26 10.96 11.36 10.75C11.46 10.55 11.41 10.37 11.33 10.21C11.26 10.06 10.64 8.53 10.38 7.92C10.13 7.33 9.87 7.41 9.68 7.4C9.5 7.39 9.29 7.39 9.08 7.39"/>
+        </svg>
+      </a>
+    </div>
+
+    <!-- JAVASCRIPT VANILLA -->
+    <script>
+      // 1. Catálogo real de especialidades y exámenes (34 exactos)
+      const ICON_BASE = 'https://www.centromedicophillips16.cl/wp-content/themes/centromedicophillips16/img/especialidades/';
+
+      const groupsData = [
+        {
+          id: 'group-1-list',
+          items: [
+            { name: 'Medicina General', icon: 'medicina-general.svg' },
+            { name: 'Medicina Familiar', icon: 'medicina-familiar.png' },
+            { name: 'Médico Internista', icon: 'medico-internista.png' },
+            { name: 'Pediatría', icon: 'pediatria.svg' },
+            { name: 'Ginecología y Obstetricia', icon: 'ginecologia.svg' },
+            { name: 'Matrona', icon: null },
+            { name: 'Dermatología', icon: null },
+            { name: 'Traumatología', icon: 'traumatologia.svg' },
+            { name: 'Gastroenterología', icon: 'gastroenterologia.svg' },
+            { name: 'Endocrinología', icon: 'endocrinologia.png' },
+            { name: 'Urología', icon: 'rinones.png' },
+            { name: 'Otorrinolaringología', icon: null },
+            { name: 'Broncopulmonar', icon: null },
+            { name: 'Neurología Adulto', icon: 'neurologia-adulto.svg' },
+            { name: 'Neurología Infantil', icon: 'neurologia-infantil.svg' },
+            { name: 'Geriatría', icon: null },
+            { name: 'Nutrición', icon: 'dieta.png' }
+          ]
+        },
+        {
+          id: 'group-2-list',
+          items: [
+            { name: 'Psiquiatría', icon: 'psiquiatria.svg' },
+            { name: 'Psicología', icon: 'cerebro.png' },
+            { name: 'Medicina General con énfasis en Salud Mental', icon: null },
+            { name: 'Terapeuta Ocupacional', icon: null },
+            { name: 'Fonoaudiología', icon: null },
+            { name: 'Kinesiología', icon: null },
+            { name: 'Terapias Complementarias', icon: null }
+          ]
+        },
+        {
+          id: 'group-3-list',
+          items: [
+            { name: 'Ecografía Doppler', icon: null },
+            { name: 'Ecografía Ginecológica', icon: null },
+            { name: 'Ecografía Transvaginal', icon: null },
+            { name: 'Ecografía 3D', icon: null },
+            { name: 'Ecografía 5D', icon: null },
+            { name: 'Examen Broncopulmonar', icon: null },
+            { name: 'Test de Alergias', icon: null },
+            { name: 'Exámenes', icon: null },
+            { name: 'Radiografías', icon: null }
+          ]
+        },
+        {
+          id: 'group-4-list',
+          items: [
+            { name: 'Clínica Dental', icon: 'servicios-dentales.svg' }
+          ]
+        }
+      ];
+
+      // Renderizar listas de especialidades
+      function renderSpecialties() {
+        groupsData.forEach(function(group) {
+          const container = document.getElementById(group.id);
+          if (!container) return;
+
+          container.innerHTML = group.items.map(function(item) {
+            const waUrl = 'https://wa.me/56972813897?text=' + encodeURIComponent('Hola, quiero agendar o cotizar: ' + item.name);
+            
+            let iconMarkup = '';
+            if (item.icon) {
+              iconMarkup = `
+                <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center shrink-0 relative overflow-hidden">
+                  <img
+                    src="${ICON_BASE + item.icon}"
+                    alt="Ícono de ${item.name}"
+                    width="24"
+                    height="24"
+                    loading="lazy"
+                    class="w-6 h-6 object-contain"
+                    onerror="this.style.display='none'; this.nextElementSibling.classList.remove('hidden');"
+                  />
+                  <span class="w-2 h-2 rounded-full bg-primary hidden" aria-hidden="true"></span>
+                </div>
+              `;
+            } else {
+              iconMarkup = `
+                <div class="w-8 h-8 rounded-full bg-surface flex items-center justify-center shrink-0">
+                  <span class="w-2 h-2 rounded-full bg-primary" aria-hidden="true"></span>
+                </div>
+              `;
+            }
+
+            return `
+              <a
+                href="${waUrl}"
+                target="_blank"
+                rel="noopener"
+                class="min-h-[56px] px-4 py-3 rounded-[14px] bg-surface/50 hover:bg-surface border border-ink/5 hover:border-ink/15 transition-all flex items-center justify-between gap-3 group active:scale-[0.99]"
+              >
+                <div class="flex items-center gap-3 min-w-0">
+                  ${iconMarkup}
+                  <span class="font-sans font-medium text-[16px] text-ink group-hover:text-primary transition-colors truncate">
+                    ${item.name}
+                  </span>
+                </div>
+                <div class="flex items-center gap-1 text-primary text-[14px] font-sans font-medium shrink-0">
+                  <span class="hidden sm:inline">Consultar</span>
+                  <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                  </svg>
+                </div>
+              </a>
+            `;
+          }).join('');
+        });
+      }
+
+      // 2. Acordeón: un solo grupo abierto a la vez
+      function toggleAccordion(index) {
+        const items = document.querySelectorAll('#accordion-container [data-accordion-item]');
+        items.forEach(function(item, i) {
+          const btn = item.querySelector('button');
+          const content = item.querySelector('.accordion-content');
+          const chevron = item.querySelector('.accordion-chevron');
+
+          if (i === index) {
+            const isCurrentlyOpen = !content.classList.contains('hidden');
+            if (isCurrentlyOpen) {
+              // Cerrar
+              content.classList.add('hidden');
+              btn.setAttribute('aria-expanded', 'false');
+              chevron.classList.remove('rotate-180');
+            } else {
+              // Abrir
+              content.classList.remove('hidden');
+              btn.setAttribute('aria-expanded', 'true');
+              chevron.classList.add('rotate-180');
+            }
+          } else {
+            // Cerrar los demás
+            content.classList.add('hidden');
+            btn.setAttribute('aria-expanded', 'false');
+            chevron.classList.remove('rotate-180');
+          }
+        });
+      }
+
+      // 3. Horario de hoy dinámico con hora de Chile (America/Santiago)
+      function updateTodaySchedule() {
+        const scheduleEl = document.getElementById('today-schedule-text');
+        if (!scheduleEl) return;
+
+        try {
+          const now = new Date();
+          // Obtener día de la semana en timezone America/Santiago
+          const dayFormatter = new Intl.DateTimeFormat('en-US', {
+            timeZone: 'America/Santiago',
+            weekday: 'short'
+          });
+          const day = dayFormatter.format(now); // 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'
+
+          if (day === 'Sun') {
+            scheduleEl.textContent = 'Hoy domingo no hay atención · agenda online para otro día';
+          } else if (day === 'Sat') {
+            scheduleEl.textContent = 'Hoy atendemos de 8:30 a 17:00 hrs';
+          } else {
+            scheduleEl.textContent = 'Hoy atendemos de 8:30 a 20:30 hrs';
+          }
+        } catch (e) {
+          scheduleEl.textContent = 'Hoy atendemos de 8:30 a 20:30 hrs';
+        }
+      }
+
+      // 4. Palabra rotativa del hero
+      const rotatingWords = [
+        'Medicina General',
+        'Pediatría',
+        'Ginecología',
+        'Dermatología',
+        'Traumatología',
+        'Ecografía',
+        'Psicología',
+        'Dental'
+      ];
+      let currentWordIndex = 0;
+      let rotatorInterval = null;
+
+      function rotateWord() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        if (document.hidden) return;
+
+        const rotatorEl = document.getElementById('rotator-word');
+        if (!rotatorEl) return;
+
+        // Animar salida hacia arriba
+        rotatorEl.classList.remove('active');
+        rotatorEl.classList.add('slide-out');
+
+        setTimeout(function() {
+          currentWordIndex = (currentWordIndex + 1) % rotatingWords.length;
+          rotatorEl.textContent = rotatingWords[currentWordIndex];
+
+          // Posicionar abajo instantáneamente
+          rotatorEl.classList.remove('slide-out');
+          rotatorEl.classList.add('slide-prep');
+
+          // Forzar reflujo
+          void rotatorEl.offsetWidth;
+
+          // Animar entrada subiendo al centro
+          rotatorEl.classList.remove('slide-prep');
+          rotatorEl.classList.add('active');
+        }, 400);
+      }
+
+      function startRotator() {
+        if (rotatorInterval) clearInterval(rotatorInterval);
+        rotatorInterval = setInterval(rotateWord, 2200);
+      }
+
+      document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+          if (rotatorInterval) clearInterval(rotatorInterval);
+        } else {
+          startRotator();
+        }
+      });
+
+      // 5. Burbuja de ayuda temporal (desaparece en 4 segundos)
+      function initHelpBubble() {
+        const bubble = document.getElementById('wa-help-bubble');
+        if (!bubble) return;
+        setTimeout(function() {
+          bubble.classList.add('opacity-0');
+          setTimeout(function() {
+            bubble.style.display = 'none';
+          }, 500);
+        }, 4000);
+      }
+
+      // 6. Manejo del formulario de contacto
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const nombreInput = document.getElementById('form-nombre');
+        const especialidadInput = document.getElementById('form-especialidad');
+        const diaInput = document.getElementById('form-dia');
+        const mensajeInput = document.getElementById('form-mensaje');
+
+        const nombre = nombreInput ? nombreInput.value.trim() : '';
+        const especialidad = especialidadInput ? especialidadInput.value.trim() : '';
+        const dia = diaInput ? diaInput.value.trim() : '';
+        const mensaje = mensajeInput ? mensajeInput.value.trim() : '';
+
+        if (!nombre) {
+          alert('Por favor ingresa tu nombre completo.');
+          if (nombreInput) nombreInput.focus();
+          return;
+        }
+
+        // Armar texto: «Hola, soy [nombre]. Quiero agendar o cotizar: [especialidad]. Día preferido: [día]. [mensaje]»
+        let textParts = [];
+        textParts.push(`Hola, soy ${nombre}.`);
+        if (especialidad) {
+          textParts.push(`Quiero agendar o cotizar: ${especialidad}.`);
+        }
+        if (dia) {
+          textParts.push(`Día preferido: ${dia}.`);
+        }
+        if (mensaje) {
+          textParts.push(mensaje);
+        }
+
+        const fullMessage = textParts.join(' ');
+        const waUrl = 'https://wa.me/56972813897?text=' + encodeURIComponent(fullMessage);
+        window.open(waUrl, '_blank', 'noopener');
+      }
+
+      // Inicialización al cargar la página
+      document.addEventListener('DOMContentLoaded', function() {
+        renderSpecialties();
+        updateTodaySchedule();
+        startRotator();
+        initHelpBubble();
+      });
+    </script>
+  </body>
+</html>
